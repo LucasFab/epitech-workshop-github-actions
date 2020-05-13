@@ -30,7 +30,7 @@ jobs:
     - name: Run a one-line script
       run: curl -u $NGINX_USER:${{secrets.NGINX_PASSWORD}} -Is http://localhost:4242 | grep "HTTP/1.1 200 OK"
       env:
-        key: NGINX_USER:john
+        NGINX_USER: john
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
