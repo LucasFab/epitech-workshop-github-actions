@@ -45,11 +45,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: sw_vers -productVersion
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run: sw_vers -productVersion
+        run: 
           echo Add other actions to build,
           echo test, and deploy your project.
         
@@ -64,11 +64,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: (Get-ComputerInfo).OsHardwareAbstractionLayer
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run: (Get-ComputerInfo).OsHardwareAbstractionLayer
+        run: 
           echo Add other actions to build,
           echo test, and deploy your project.
       
