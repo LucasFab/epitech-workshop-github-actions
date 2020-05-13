@@ -28,7 +28,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: curl -Is http://localhost:4242 | grep "HTTP/1.1 200 OK"
+      run: curl -u NGINX_USER:${secrets.NGINX_PASSWORD} -Is http://localhost:4242 | grep "HTTP/1.1 200 OK"
       env:
         key: NGINX_USER:john
 
